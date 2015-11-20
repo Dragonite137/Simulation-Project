@@ -3,7 +3,7 @@ import drawWorld as dw
 import pygame as pg
 from random import randint
 
-name = "Soccer Game"
+name = "Click the Soccer Ball to Stop it from Going in the Goal"
 width = 800
 height = 800
 rw.newDisplay(width, height, name)
