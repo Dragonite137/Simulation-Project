@@ -3,7 +3,7 @@ import drawWorld as dw
 import pygame as pg
 from random import randint
 
-name = "Click the Soccer Ball to Stop it from Going in the Goal"
+name = "Move the cursor over the Soccer Ball to Stop it from Going in the Goal!"
 width = 800
 height = 800
 rw.newDisplay(width, height, name)
@@ -29,11 +29,10 @@ def handleEvent(state, event):
     p = pg.mouse.get_pos()
     if ((p[0]>=state[0] and p[0] <= (state[0] + 98)) and  ((p[1]>=state[1] and p[1] <= (state[1] + 100)))):
         return(state[0], state[1], 0, 0)
-        
     else:
         return(state)
    
-initState = (400, 700, randint(-2,2),randint(-10,-8))
+initState = (400, 700, randint(-2,2),randint(-12,-10))
 frameRate = 60
 
 rw.runWorld(initState, updateDisplay, updateState, handleEvent, endState, frameRate)
